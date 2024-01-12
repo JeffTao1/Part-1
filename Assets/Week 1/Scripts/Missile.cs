@@ -19,7 +19,7 @@ public class Missile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             transform.Translate(transform.position.x * speed * Time.deltaTime,0,0);
 
