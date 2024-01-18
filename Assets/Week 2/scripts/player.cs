@@ -10,7 +10,7 @@ public class player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,5 +24,10 @@ public class player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(direction * speed *Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Player hit something");
     }
 }
