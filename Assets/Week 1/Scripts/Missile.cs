@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour
 {
-    public float speed = 100;
+    public float speed = 0.05f;
     
     public Transform barrel;
 
@@ -19,7 +19,8 @@ public class Missile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.position.x * speed * Time.deltaTime, 0, 0);
+        transform.Translate(1 * speed * Time.deltaTime, 0, 0);
+        //transform.Translate(transform.position.x * speed * Time.deltaTime, 0, 0);
         /*
         if (Input.GetKey(KeyCode.Space))
         {
