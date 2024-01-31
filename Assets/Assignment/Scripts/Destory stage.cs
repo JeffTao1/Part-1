@@ -15,7 +15,7 @@ public class Destorystage : MonoBehaviour
     {
         
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)// after player leave the stage the stage will destroy
     {
         Destroy(gameObject);
     }
